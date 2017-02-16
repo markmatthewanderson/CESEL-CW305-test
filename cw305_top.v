@@ -209,7 +209,7 @@ module cw305_top(
     wire CESEL_busy;
     assign crypt_done = ~CESEL_busy;
     
-    CESEL CESEL (
+    CESEL_test CESEL_test (
         .clk(crypt_clk),
         .start(crypt_start),
         //.key(crypt_key),

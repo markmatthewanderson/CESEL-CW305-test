@@ -1,0 +1,815 @@
+
+*** Running vivado
+    with args -log cw305_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source cw305_top.tcl
+
+awk: symbol lookup error: awk: undefined symbol: mpfr_z_sub
+
+****** Vivado v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source cw305_top.tcl -notrace
+Command: synth_design -top cw305_top -part xc7a100tftg256-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 25972 
+awk: symbol lookup error: awk: undefined symbol: mpfr_z_sub
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1057.461 ; gain = 120.086 ; free physical = 14050 ; free virtual = 61159
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'cw305_top' [/home/mark01/CESEL-CW305-test/cw305_top.v:34]
+INFO: [Synth 8-638] synthesizing module 'usb_module' [/home/mark01/CESEL-CW305-test/usb_module.v:33]
+	Parameter MEMORY_WIDTH bound to: 10 - type: integer 
+	Parameter MEMORY_BYTES bound to: 1024 - type: integer 
+	Parameter MEMORY_MASK bound to: 1023 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'IBUFG' [/home/mark01/Vivado/2016.4/scripts/rt/data/unisim_comp.v:14570]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IBUFG' (1#1) [/home/mark01/Vivado/2016.4/scripts/rt/data/unisim_comp.v:14570]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [/home/mark01/Vivado/2016.4/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (2#1) [/home/mark01/Vivado/2016.4/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'usb_module' (3#1) [/home/mark01/CESEL-CW305-test/usb_module.v:33]
+INFO: [Synth 8-638] synthesizing module 'registers' [/home/mark01/CESEL-CW305-test/registers.v:94]
+	Parameter MEMORY_WIDTH bound to: 10 - type: integer 
+	Parameter MEMORY_BYTES bound to: 1024 - type: integer 
+	Parameter KEY_WIDTH bound to: 128 - type: integer 
+	Parameter PT_WIDTH bound to: 128 - type: integer 
+	Parameter CT_WIDTH bound to: 128 - type: integer 
+	Parameter done_edge_sensitive bound to: 1 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'BUFGCTRL' [/home/mark01/Vivado/2016.4/scripts/rt/data/unisim_comp.v:661]
+	Parameter INIT_OUT bound to: 0 - type: integer 
+	Parameter IS_CE0_INVERTED bound to: 1'b0 
+	Parameter IS_CE1_INVERTED bound to: 1'b0 
+	Parameter IS_I0_INVERTED bound to: 1'b0 
+	Parameter IS_I1_INVERTED bound to: 1'b0 
+	Parameter IS_IGNORE0_INVERTED bound to: 1'b0 
+	Parameter IS_IGNORE1_INVERTED bound to: 1'b0 
+	Parameter IS_S0_INVERTED bound to: 1'b0 
+	Parameter IS_S1_INVERTED bound to: 1'b0 
+	Parameter PRESELECT_I0 bound to: FALSE - type: string 
+	Parameter PRESELECT_I1 bound to: FALSE - type: string 
+INFO: [Synth 8-256] done synthesizing module 'BUFGCTRL' (4#1) [/home/mark01/Vivado/2016.4/scripts/rt/data/unisim_comp.v:661]
+INFO: [Synth 8-638] synthesizing module 'ODDR' [/home/mark01/Vivado/2016.4/scripts/rt/data/unisim_comp.v:25305]
+	Parameter DDR_CLK_EDGE bound to: OPPOSITE_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-256] done synthesizing module 'ODDR' (5#1) [/home/mark01/Vivado/2016.4/scripts/rt/data/unisim_comp.v:25305]
+WARNING: [Synth 8-3848] Net init in module/entity registers does not have driver. [/home/mark01/CESEL-CW305-test/registers.v:128]
+INFO: [Synth 8-256] done synthesizing module 'registers' (6#1) [/home/mark01/CESEL-CW305-test/registers.v:94]
+WARNING: [Synth 8-350] instance 'reg_inst' of module 'registers' requires 22 connections, but only 20 given [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+INFO: [Synth 8-638] synthesizing module 'CESEL_test' [/home/mark01/CESEL-CW305-test/CESEL_test.v:13]
+INFO: [Synth 8-256] done synthesizing module 'CESEL_test' (7#1) [/home/mark01/CESEL-CW305-test/CESEL_test.v:13]
+WARNING: [Synth 8-3848] Net tio_trigger in module/entity cw305_top does not have driver. [/home/mark01/CESEL-CW305-test/cw305_top.v:62]
+WARNING: [Synth 8-3848] Net crypt_ready in module/entity cw305_top does not have driver. [/home/mark01/CESEL-CW305-test/cw305_top.v:98]
+INFO: [Synth 8-256] done synthesizing module 'cw305_top' (8#1) [/home/mark01/CESEL-CW305-test/cw305_top.v:34]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8191]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8190]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8189]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8188]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8187]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8186]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8185]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8184]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8183]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8182]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8181]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8180]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8179]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8178]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8177]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8176]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8175]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8174]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8173]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8172]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8171]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8170]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8169]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8168]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8167]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8166]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8165]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8164]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8163]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8162]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8161]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8160]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8159]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8158]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8157]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8156]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8155]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8154]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8153]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8152]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8151]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8150]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8149]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8148]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8147]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8146]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8145]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8144]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8143]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8142]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8141]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8140]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8139]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8138]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8137]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8136]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8135]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8134]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8133]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8132]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8131]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8130]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8129]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8128]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8127]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8126]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8125]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8124]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8123]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8122]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8121]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8120]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8119]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8118]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8117]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8116]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8115]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8114]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8113]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8112]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8111]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8110]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8109]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8108]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8107]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8106]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8105]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8104]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8103]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8102]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8101]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8100]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8099]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8098]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8097]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8096]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8095]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8094]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8093]
+WARNING: [Synth 8-3331] design registers has unconnected port mem_output[8092]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1109.930 ; gain = 172.555 ; free physical = 13995 ; free virtual = 61105
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[127] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[126] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[125] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[124] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[123] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[122] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[121] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[120] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[119] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[118] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[117] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[116] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[115] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[114] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[113] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[112] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[111] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[110] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[109] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[108] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[107] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[106] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[105] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[104] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[103] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[102] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[101] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[100] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[99] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[98] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[97] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[96] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[95] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[94] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[93] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[92] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[91] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[90] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[89] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[88] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[87] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[86] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[85] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[84] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[83] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[82] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[81] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[80] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[79] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[78] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[77] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[76] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[75] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[74] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[73] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[72] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[71] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[70] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[69] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[68] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[67] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[66] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[65] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[64] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[63] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[62] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[61] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[60] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[59] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[58] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[57] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[56] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[55] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[54] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[53] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[52] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[51] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[50] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[49] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[48] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[47] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[46] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[45] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[44] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[43] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[42] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[41] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[40] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[39] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[38] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[37] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[36] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[35] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[34] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[33] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[32] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[31] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[30] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[29] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+WARNING: [Synth 8-3295] tying undriven pin reg_inst:textout[28] to constant 0 [/home/mark01/CESEL-CW305-test/cw305_top.v:124]
+INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1109.930 ; gain = 172.555 ; free physical = 13996 ; free virtual = 61105
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a100tftg256-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/mark01/CESEL-CW305-test/cw305_main.xdc]
+Finished Parsing XDC File [/home/mark01/CESEL-CW305-test/cw305_main.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/mark01/CESEL-CW305-test/cw305_main.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cw305_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/cw305_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IBUFG => IBUF: 1 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1493.750 ; gain = 0.000 ; free physical = 13682 ; free virtual = 60792
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1493.750 ; gain = 556.375 ; free physical = 13678 ; free virtual = 60788
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tftg256-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1493.750 ; gain = 556.375 ; free physical = 13678 ; free virtual = 60788
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1493.750 ; gain = 556.375 ; free physical = 13678 ; free virtual = 60788
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1493.750 ; gain = 556.375 ; free physical = 13660 ; free virtual = 60769
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |usb_module__GCB0 |           1|     32640|
+|2     |usb_module__GCB1 |           1|      8160|
+|3     |usb_module__GCB2 |           1|     10200|
+|4     |usb_module__GCB3 |           1|     14280|
+|5     |usb_module__GCB4 |           1|     32869|
+|6     |usb_module__GCB5 |           1|     32880|
+|7     |usb_module__GCB6 |           1|     29088|
+|8     |usb_module__GCB7 |           1|     28560|
+|9     |usb_module__GCB8 |           1|      8160|
+|10    |cw305_top__GC0   |           1|       829|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3538] Detected potentially large (wide) register memory_input_reg [/home/mark01/CESEL-CW305-test/usb_module.v:80]
+Detailed RTL Component Info : 
++---Registers : 
+	             8192 Bit    Registers := 1     
+	              128 Bit    Registers := 3     
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input   8192 Bit        Muxes := 1     
+	   2 Input    128 Bit        Muxes := 1     
+	   2 Input    126 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3538] Detected potentially large (wide) register memory_input_reg [/home/mark01/CESEL-CW305-test/usb_module.v:80]
+Hierarchical RTL Component report 
+Module usb_module 
+Detailed RTL Component Info : 
++---Registers : 
+	             8192 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input   8192 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+Module registers 
+Detailed RTL Component Info : 
++---Registers : 
+	              128 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+Module CESEL_test 
+Detailed RTL Component Info : 
++---Registers : 
+	              128 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 1     
+	   2 Input    126 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 4 processes.
+awk: symbol lookup error: awk: undefined symbol: mpfr_z_sub
+awk: symbol lookup error: awk: undefined symbol: mpfr_z_sub
+awk: symbol lookup error: awk: undefined symbol: mpfr_z_sub
+awk: symbol lookup error: awk: undefined symbol: mpfr_z_sub
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[0]' (FDRE) to 'i_9/CESEL_test/ct_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[1]' (FDRE) to 'i_9/CESEL_test/ct_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[2]' (FDRE) to 'i_9/CESEL_test/ct_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[3]' (FDRE) to 'i_9/CESEL_test/ct_reg[5]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[4]' (FDRE) to 'i_9/CESEL_test/ct_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[5]' (FDRE) to 'i_9/CESEL_test/ct_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[6]' (FDRE) to 'i_9/CESEL_test/ct_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[7]' (FDRE) to 'i_9/CESEL_test/ct_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[8]' (FDRE) to 'i_9/CESEL_test/ct_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[9]' (FDRE) to 'i_9/CESEL_test/ct_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[10]' (FDRE) to 'i_9/CESEL_test/ct_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[11]' (FDRE) to 'i_9/CESEL_test/ct_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[12]' (FDRE) to 'i_9/CESEL_test/ct_reg[13]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[13]' (FDRE) to 'i_9/CESEL_test/ct_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[14]' (FDRE) to 'i_9/CESEL_test/ct_reg[17]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[15]' (FDRE) to 'i_9/CESEL_test/ct_reg[16]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[16]' (FDRE) to 'i_9/CESEL_test/ct_reg[18]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[17]' (FDRE) to 'i_9/CESEL_test/ct_reg[20]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[18]' (FDRE) to 'i_9/CESEL_test/ct_reg[19]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[19]' (FDRE) to 'i_9/CESEL_test/ct_reg[21]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[20]' (FDRE) to 'i_9/CESEL_test/ct_reg[22]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[21]' (FDRE) to 'i_9/CESEL_test/ct_reg[23]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[22]' (FDRE) to 'i_9/CESEL_test/ct_reg[24]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[23]' (FDRE) to 'i_9/CESEL_test/ct_reg[25]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[24]' (FDRE) to 'i_9/CESEL_test/ct_reg[29]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[25]' (FDRE) to 'i_9/CESEL_test/ct_reg[26]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[26]' (FDRE) to 'i_9/CESEL_test/ct_reg[27]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[27]' (FDRE) to 'i_9/CESEL_test/ct_reg[28]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[28]' (FDRE) to 'i_9/CESEL_test/ct_reg[30]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[29]' (FDRE) to 'i_9/CESEL_test/ct_reg[36]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[30]' (FDRE) to 'i_9/CESEL_test/ct_reg[31]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[31]' (FDRE) to 'i_9/CESEL_test/ct_reg[32]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[32]' (FDRE) to 'i_9/CESEL_test/ct_reg[33]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[33]' (FDRE) to 'i_9/CESEL_test/ct_reg[34]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[34]' (FDRE) to 'i_9/CESEL_test/ct_reg[35]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[35]' (FDRE) to 'i_9/CESEL_test/ct_reg[37]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[36]' (FDRE) to 'i_9/CESEL_test/ct_reg[40]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[37]' (FDRE) to 'i_9/CESEL_test/ct_reg[38]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[38]' (FDRE) to 'i_9/CESEL_test/ct_reg[39]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[39]' (FDRE) to 'i_9/CESEL_test/ct_reg[41]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[40]' (FDRE) to 'i_9/CESEL_test/ct_reg[46]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[41]' (FDRE) to 'i_9/CESEL_test/ct_reg[42]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[42]' (FDRE) to 'i_9/CESEL_test/ct_reg[43]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[43]' (FDRE) to 'i_9/CESEL_test/ct_reg[44]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[44]' (FDRE) to 'i_9/CESEL_test/ct_reg[45]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[45]' (FDRE) to 'i_9/CESEL_test/ct_reg[47]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[46]' (FDRE) to 'i_9/CESEL_test/ct_reg[49]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[47]' (FDRE) to 'i_9/CESEL_test/ct_reg[48]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[48]' (FDRE) to 'i_9/CESEL_test/ct_reg[50]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[49]' (FDRE) to 'i_9/CESEL_test/ct_reg[52]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[50]' (FDRE) to 'i_9/CESEL_test/ct_reg[51]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[51]' (FDRE) to 'i_9/CESEL_test/ct_reg[53]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[52]' (FDRE) to 'i_9/CESEL_test/ct_reg[54]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[53]' (FDRE) to 'i_9/CESEL_test/ct_reg[55]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[54]' (FDRE) to 'i_9/CESEL_test/ct_reg[56]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[55]' (FDRE) to 'i_9/CESEL_test/ct_reg[57]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[56]' (FDRE) to 'i_9/CESEL_test/ct_reg[61]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[57]' (FDRE) to 'i_9/CESEL_test/ct_reg[58]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[58]' (FDRE) to 'i_9/CESEL_test/ct_reg[59]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[59]' (FDRE) to 'i_9/CESEL_test/ct_reg[60]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[60]' (FDRE) to 'i_9/CESEL_test/ct_reg[62]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[61]' (FDRE) to 'i_9/CESEL_test/ct_reg[68]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[62]' (FDRE) to 'i_9/CESEL_test/ct_reg[63]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[63]' (FDRE) to 'i_9/CESEL_test/ct_reg[64]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[64]' (FDRE) to 'i_9/CESEL_test/ct_reg[65]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[65]' (FDRE) to 'i_9/CESEL_test/ct_reg[66]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[66]' (FDRE) to 'i_9/CESEL_test/ct_reg[67]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[67]' (FDRE) to 'i_9/CESEL_test/ct_reg[69]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[68]' (FDRE) to 'i_9/CESEL_test/ct_reg[72]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[69]' (FDRE) to 'i_9/CESEL_test/ct_reg[70]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[70]' (FDRE) to 'i_9/CESEL_test/ct_reg[71]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[71]' (FDRE) to 'i_9/CESEL_test/ct_reg[73]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[72]' (FDRE) to 'i_9/CESEL_test/ct_reg[78]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[73]' (FDRE) to 'i_9/CESEL_test/ct_reg[74]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[74]' (FDRE) to 'i_9/CESEL_test/ct_reg[75]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[75]' (FDRE) to 'i_9/CESEL_test/ct_reg[76]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[76]' (FDRE) to 'i_9/CESEL_test/ct_reg[77]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[77]' (FDRE) to 'i_9/CESEL_test/ct_reg[79]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[78]' (FDRE) to 'i_9/CESEL_test/ct_reg[81]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[79]' (FDRE) to 'i_9/CESEL_test/ct_reg[80]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[80]' (FDRE) to 'i_9/CESEL_test/ct_reg[82]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[81]' (FDRE) to 'i_9/CESEL_test/ct_reg[84]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[82]' (FDRE) to 'i_9/CESEL_test/ct_reg[83]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[83]' (FDRE) to 'i_9/CESEL_test/ct_reg[85]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[84]' (FDRE) to 'i_9/CESEL_test/ct_reg[86]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[85]' (FDRE) to 'i_9/CESEL_test/ct_reg[87]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[86]' (FDRE) to 'i_9/CESEL_test/ct_reg[88]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[87]' (FDRE) to 'i_9/CESEL_test/ct_reg[89]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[88]' (FDRE) to 'i_9/CESEL_test/ct_reg[93]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[89]' (FDRE) to 'i_9/CESEL_test/ct_reg[90]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[90]' (FDRE) to 'i_9/CESEL_test/ct_reg[91]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[91]' (FDRE) to 'i_9/CESEL_test/ct_reg[92]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[92]' (FDRE) to 'i_9/CESEL_test/ct_reg[94]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[93]' (FDRE) to 'i_9/CESEL_test/ct_reg[100]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[94]' (FDRE) to 'i_9/CESEL_test/ct_reg[95]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[95]' (FDRE) to 'i_9/CESEL_test/ct_reg[96]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[96]' (FDRE) to 'i_9/CESEL_test/ct_reg[97]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[97]' (FDRE) to 'i_9/CESEL_test/ct_reg[98]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[98]' (FDRE) to 'i_9/CESEL_test/ct_reg[99]'
+INFO: [Synth 8-3886] merging instance 'i_9/CESEL_test/ct_reg[99]' (FDRE) to 'i_9/CESEL_test/ct_reg[101]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_9/\CESEL_test/ct_reg[125] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_9/\reg_inst/reg_crypt_cipherout_reg[125] )
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[25] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[24] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[23] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[22] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[21] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[20] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[19] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[18] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[17] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[16] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[15] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[14] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[13] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[2] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[1] driven by constant 0
+WARNING: [Synth 8-3917] design usb_module__GCB5 has port P[0] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:38 ; elapsed = 00:01:57 . Memory (MB): peak = 1493.750 ; gain = 556.375 ; free physical = 11379 ; free virtual = 58536
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |usb_module__GCB0 |           1|      5232|
+|2     |usb_module__GCB1 |           1|        64|
+|3     |usb_module__GCB2 |           1|      1635|
+|4     |usb_module__GCB3 |           1|      2289|
+|5     |usb_module__GCB4 |           1|     32869|
+|6     |usb_module__GCB5 |           1|      5123|
+|7     |usb_module__GCB6 |           1|      5106|
+|8     |usb_module__GCB7 |           1|      4578|
+|9     |usb_module__GCB8 |           1|      1784|
+|10    |cw305_top__GC0   |           1|       224|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:44 ; elapsed = 00:02:03 . Memory (MB): peak = 1503.734 ; gain = 566.359 ; free physical = 11342 ; free virtual = 58501
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:45 ; elapsed = 00:02:04 . Memory (MB): peak = 1504.734 ; gain = 567.359 ; free physical = 11340 ; free virtual = 58498
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |usb_module__GCB0 |           1|       269|
+|2     |usb_module__GCB1 |           1|        11|
+|3     |usb_module__GCB4 |           1|       122|
+|4     |usb_module__GCB5 |           1|        52|
+|5     |usb_module__GCB6 |           1|       105|
+|6     |cw305_top__GC0   |           1|       224|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[127]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[126]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[125]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[124]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[123]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[122]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[121]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[120]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[119]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[118]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[117]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[116]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[115]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[114]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[113]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[112]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[111]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[110]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[109]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[108]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[107]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[106]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[105]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[104]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[103]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[102]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[101]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[100]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[99]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[98]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[97]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[96]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[95]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[94]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[93]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[92]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[91]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[90]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[89]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[88]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[87]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[86]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[85]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[84]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[83]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[82]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[81]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[80]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[79]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[78]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[77]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[76]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[75]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[74]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[73]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[72]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[71]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[70]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[69]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[68]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[67]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[66]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[65]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[64]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[63]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[62]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[61]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[60]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[59]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[58]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[57]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[56]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[55]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[54]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[53]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[52]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[51]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[50]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[49]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[48]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[47]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[46]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[45]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[44]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[43]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[42]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[41]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[40]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[39]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[38]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[37]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[36]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[35]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[34]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[33]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[32]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[31]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[30]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[29]) is unused and will be removed from module cw305_top.
+WARNING: [Synth 8-3332] Sequential element (reg_inst/reg_crypt_textout_reg[28]) is unused and will be removed from module cw305_top.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:45 ; elapsed = 00:02:04 . Memory (MB): peak = 1520.750 ; gain = 583.375 ; free physical = 11323 ; free virtual = 58483
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:46 ; elapsed = 00:02:05 . Memory (MB): peak = 1520.750 ; gain = 583.375 ; free physical = 11323 ; free virtual = 58483
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:46 ; elapsed = 00:02:05 . Memory (MB): peak = 1520.750 ; gain = 583.375 ; free physical = 11323 ; free virtual = 58483
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:46 ; elapsed = 00:02:05 . Memory (MB): peak = 1520.750 ; gain = 583.375 ; free physical = 11323 ; free virtual = 58483
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:46 ; elapsed = 00:02:05 . Memory (MB): peak = 1520.750 ; gain = 583.375 ; free physical = 11323 ; free virtual = 58483
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:46 ; elapsed = 00:02:05 . Memory (MB): peak = 1520.750 ; gain = 583.375 ; free physical = 11323 ; free virtual = 58483
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:46 ; elapsed = 00:02:05 . Memory (MB): peak = 1520.750 ; gain = 583.375 ; free physical = 11323 ; free virtual = 58483
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     3|
+|2     |BUFGCTRL |     1|
+|3     |CARRY4   |    13|
+|4     |LUT1     |    52|
+|5     |LUT2     |     7|
+|6     |LUT3     |     5|
+|7     |LUT4     |    11|
+|8     |LUT5     |     7|
+|9     |LUT6     |    27|
+|10    |MUXF7    |     1|
+|11    |ODDR     |     1|
+|12    |FDRE     |    73|
+|13    |IBUF     |    28|
+|14    |IBUFG    |     1|
+|15    |IOBUF    |     5|
+|16    |OBUF     |     4|
+|17    |OBUFT    |     4|
++------+---------+------+
+
+Report Instance Areas: 
++------+-------------+-----------+------+
+|      |Instance     |Module     |Cells |
++------+-------------+-----------+------+
+|1     |top          |           |   243|
+|2     |  CESEL_test |CESEL_test |     5|
+|3     |  my_usb     |usb_module |    59|
+|4     |  reg_inst   |registers  |    27|
++------+-------------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:46 ; elapsed = 00:02:05 . Memory (MB): peak = 1520.750 ; gain = 583.375 ; free physical = 11323 ; free virtual = 58483
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 149 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:39 ; elapsed = 00:01:59 . Memory (MB): peak = 1524.660 ; gain = 123.375 ; free physical = 13541 ; free virtual = 60701
+Synthesis Optimization Complete : Time (s): cpu = 00:01:46 ; elapsed = 00:02:06 . Memory (MB): peak = 1524.660 ; gain = 587.285 ; free physical = 13543 ; free virtual = 60700
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 48 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  IBUFG => IBUF: 1 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 5 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+144 Infos, 320 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:46 ; elapsed = 00:02:05 . Memory (MB): peak = 1568.773 ; gain = 563.895 ; free physical = 13542 ; free virtual = 60699
+INFO: [Common 17-1381] The checkpoint '/home/mark01/CESEL-CW305-test/CESEL-CW305-test.runs/synth_CESEL-CW305-test/cw305_top.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.16 . Memory (MB): peak = 1592.785 ; gain = 0.000 ; free physical = 13542 ; free virtual = 60699
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 15 15:54:16 2017...
